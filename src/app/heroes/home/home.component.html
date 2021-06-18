@@ -1,0 +1,5 @@
+<div *ngFor="let item of detalheHeroes">
+    <img src="{{item.thumbnail}}" alt=""> <br>
+    {{item.name}} <br>
+    <div *ngFor="let stories of item.stories"> {{stories.name}}</div><br>
+</div>
