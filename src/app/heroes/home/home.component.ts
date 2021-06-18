@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GetHeroesService, Thumbnail } from '../service/get-heros.service';
+import { GetHeroesService } from '../service/get-heros.service';
+
 
 @Component({
   selector: 'app-home',
