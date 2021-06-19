@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-color: #303030;    
+    color: white;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card, .list-group-item{
+   background-color:#424242 ; 
+   color: #fff;
+}
+
+.card:not([class*="mat-elevation-z"]) {
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.list-group-item{
+    border: none;
+    font-size: 0.91rem;
+}
+
+h3{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.card > .list-group:last-child{
+    border-color: #575757;
+}
+.spinner-border{
+    width: 5rem;
+    height: 5rem;
+}

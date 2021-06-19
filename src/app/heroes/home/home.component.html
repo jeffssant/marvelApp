@@ -1,5 +1,26 @@
-<div *ngFor="let item of detalheHeroes">
-    <img src="{{item.thumbnail}}" alt=""> <br>
-    {{item.name}} <br>
-    <div *ngFor="let stories of item.stories"> {{stories.name}}</div><br>
+<h1>Marvel Heroes List</h1>
+<hr>
+<div class="row" *ngIf="erros < 3">
+    <div class="col-md-4 col-12" *ngFor="let item of detailHero">
+        <div class="card">
+            <h2 class="mt-3 ps-3">{{item.name}}</h2>
+            <img src="{{item.thumbnail}}" class="card-img-top" alt="...">
+            <h3 class="ps-3 mt-4">Histórias</h3>
+            <div class="card-body list-group list-group-numbered">
+                <li class="list-group-item " *ngFor="let stories of item.stories">
+                    {{stories.name | titlecase}}            
+                          
+                </li>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="alert alert-danger" role="alert" *ngIf="erros == 3">
+    Encontramos erros na busca pelos heorois, por favor verifique suas chaves!
+</div>
+<div class="d-flex justify-content-center pt-5 mt-5">
+    <div class="spinner-border text-danger" role="status" *ngIf="detailHero.length == 0 && erros == 0">
+        <span class="visually-hidden">Loading...</span>
+    </div>
 </div>
