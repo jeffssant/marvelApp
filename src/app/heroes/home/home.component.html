@@ -2,8 +2,8 @@
 <hr>
 <div class="row" *ngIf="erros < 3">
     <div class="col-md-4 col-12" *ngFor="let item of detailHero">
-        <div class="card">
-            <h2 class="mt-3 ps-3">{{item.name}}</h2>
+        <div class="card ">
+            <h2 class="mt-3 ps-3 mb-3 text-center">{{item.name | uppercase}}</h2>
             <img src="{{item.thumbnail}}" class="card-img-top" alt="...">
             <h3 class="ps-3 mt-4">Histórias</h3>
             <div class="card-body list-group list-group-numbered">

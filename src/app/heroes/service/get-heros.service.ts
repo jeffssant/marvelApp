@@ -33,7 +33,9 @@ export class GetHeroesService {
         return throwError(err);
       }),
 
-      map(resp => {return resp.data.results[0]})
+      map(resp => {
+        return resp.data.results[0]; 
+       })
     );
   }
 
